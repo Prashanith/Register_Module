@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             child:Center(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   DropdownButton<String>(
@@ -80,6 +80,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     }).toList(),
                     onChanged: (_) {},
 
+                  ),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor:MaterialStateProperty.all<Color>(Colors.blueGrey[900]),
+                    ),
+                    onPressed: () {  },
+                    child: Text('REGISTER'),
                   ),
                   GestureDetector(
                       child: Text(
