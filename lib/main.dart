@@ -38,55 +38,66 @@ class _MyHomePageState extends State<MyHomePage> {
       body:SafeArea(
         child: Container(
           padding: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage('https://images.pexels.com/photos/6927305/pexels-photo-6927305.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'),
-                fit: BoxFit.cover,
-              ),
-            ),
             child:Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  DropdownButton<String>(
-                    focusColor: Colors.blueGrey,
-                    style: const TextStyle(color: Colors.deepPurple),
-                    underline: Container(
-                      height: 1,
-                      color: Colors.blueGrey,
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage('https://images.pexels.com/photos/6927305/pexels-photo-6927305.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    hint: Text('Drop Down 1',),
-                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
                   ),
-                  DropdownButton<String>(
-                    hint: Text('Drop Down 2'),
-                    style: const TextStyle(color: Colors.deepPurple),
-                    underline: Container(
-                      height: 1,
-                      color: Colors.blueGrey,
-                    ),
-                    items: <String>['P', 'Q', 'R', 'S'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      DropdownButton<String>(
+                        focusColor: Colors.blueGrey,
+                        style: const TextStyle(color: Colors.deepPurple),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.blueGrey,
+                        ),
+                        hint: Text('Drop Down 1',),
+                        items: <String>['A', 'B', 'C', 'D'].map((String value) {
+                          return new DropdownMenuItem<String>(
+                            value: value,
+                            child: new Text(value),
+                          );
+                        }).toList(),
+                        onChanged: (_) {},
+                      ),
+                      DropdownButton<String>(
+                        hint: Text('Drop Down 2'),
+                        style: const TextStyle(color: Colors.deepPurple),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.blueGrey,
+                        ),
+                        items: <String>['P', 'Q', 'R', 'S'].map((String value) {
+                          return new DropdownMenuItem<String>(
+                            value: value,
+                            child: new Text(value),
+                          );
+                        }).toList(),
+                        onChanged: (_) {},
 
+                      ),
+
+                    ],
                   ),
                   ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor:MaterialStateProperty.all<Color>(Colors.blueGrey[900]),
                     ),
                     onPressed: () {  },
-                    child: Text('REGISTER'),
+                    child: Text('SUBMIT'),
                   ),
                   GestureDetector(
                       child: Text(
