@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 200,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage('https://images.pexels.com/photos/6927305/pexels-photo-6927305.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'),
+                        image: AssetImage('assets/pexel.jpeg'),
                         fit: BoxFit.cover,
                       ),
                     ),
